@@ -1,0 +1,19 @@
+# Simple test workflow to verify GitHub Actions
+
+name: My Github Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  testing_github:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say hello
+        run: echo "Hello, GitHub Actions"
+
+      - name: Show repo name
+        run: echo "This workflow is running in ${{ github.repository }}"
